@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #252129;
+    --color-base2: rgb(24,20,28);
+    --color-brand: #ff64ea;
+    --color-brand2: #fffffd;
+    --sidebar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidebar-width);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #content-wrapper {
+        padding-left: var(--sidebar-width);
+    }
+}
+
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 50px;
+}
+
+@keyframes slide{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+}
+
+.logos{
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+
+}
+
+.logos-slide{
+    display: inline-block;
+    animation: 35s slide infinite linear;
+    padding-right: 52%;
+}
+
+.logos-slide img{
+   width: 10%;
+   margin: 0 30px;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+    padding-right: 39%;
+  }
+
+
+.footerinfo{
+    display: flex;
+    flex-direction: row;
+}
+
+.footertxt{
+    padding-right: 20px;
+}
+
+.darkmode{
+    --color-body: #646464;
+    --color-heading: #ff71c9;
+    --color-base: #dfdfdf;
+    --color-base2: rgb(187, 187, 187);
+    --color-brand: #301c2d;
+    --color-brand2: #353535;
+    --sidebar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--color-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: 1s;
+}
+
+#theme-switch svg{
+    fill: var(--color-base);
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+.progress-bar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-base);
+}
+
+.progress-bar-inner{
+    position: relative;
+    width: 0%;
+    padding: 0px;
+    height: 0.1vh;
+    background-color: var(--color-body);}
+
+header{
+    position: sticky;
+    top: 0;
+    padding: 0px;
+    text-align: center;
+    background-color: #FFF;    
+}
+
+@media (max-width: 990px) {
+
+    #theme-switch {
+        top: 9%;
+    }
+
+    .logos-slide img{
+        width: 10%;
+        margin: 0 20px;
+     }
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .card-custom .card-custom-image img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.skill-icon {
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.skill-icon img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.skill-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem; 
+    min-height: 90px;
+    align-items: center;
+}
+
+.service h5 {
+    min-height: 48px;
+}
+  
